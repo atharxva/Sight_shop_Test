@@ -1,0 +1,7 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1781611546896,44,GET /api/getkey,200,OK,API Smoke Thread Group 1-1,text,true,,324,127,1,1,http://localhost:8000/api/getkey,39,0,12
+1781611546941,43,GET /products,200,OK,API Smoke Thread Group 1-1,text,true,,9299,125,1,1,http://localhost:8000/products,43,0,0
+1781611546985,12,GET /api/doctors,200,OK,API Smoke Thread Group 1-1,text,true,,2779,128,1,1,http://localhost:8000/api/doctors,12,0,0
+1781611546997,102,GET /search/eye,200,OK,API Smoke Thread Group 1-1,text,true,,729,127,1,1,http://localhost:8000/search/eye,102,0,0
+1781611547100,4,POST /api/admin/login,200,OK,API Smoke Thread Group 1-1,text,true,,319,249,1,1,http://localhost:8000/api/admin/login,4,0,0
+1781611547105,91,POST /api/order,200,OK,API Smoke Thread Group 1-1,text,true,,526,221,1,1,http://localhost:8000/api/order,91,0,0

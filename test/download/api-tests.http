@@ -1,0 +1,30 @@
+@baseUrl = http://localhost:8000
+
+### 1. Get the Razorpay key
+GET {{baseUrl}}/api/getkey
+
+### 2. Get all products
+GET {{baseUrl}}/products
+
+### 3. Get all doctors
+GET {{baseUrl}}/api/doctors
+
+### 4. Search products by name
+GET {{baseUrl}}/search/eye
+
+### 5. Admin login
+POST {{baseUrl}}/api/admin/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin123"
+}
+
+### 6. Create a payment order
+POST {{baseUrl}}/api/order
+Content-Type: application/json
+
+{
+  "amount": 100
+}
