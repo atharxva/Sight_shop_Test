@@ -10,6 +10,11 @@ pipeline {
   PATH = "/opt/homebrew/bin:/opt/homebrew/opt/openjdk@21/bin:${env.PATH}"
   }
   stages {
+    stage('Init submodules') {
+        steps {
+          sh 'git submodule update --init --recursive'
+        }
+      }
     stage('Start backend') {
         steps {
             dir("${PROJECT_DIR}/backend") {
