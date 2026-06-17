@@ -6,6 +6,7 @@ pipeline {
   environment {
     BACKEND_URL = "http://localhost:8000"
     PROJECT_DIR = "Desktop/Coding/Final_proj copy"
+    PATH = "/opt/homebrew/bin:${env.PATH}"
   }
   stages {
     stage('Start backend') {
