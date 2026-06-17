@@ -4,17 +4,12 @@ pipeline {
     timestamps()
   }
   environment {
-  BACKEND_URL = "http://localhost:8000"
-  PROJECT_DIR = "Desktop/Coding/Final_proj copy"
-  JAVA_HOME = "/opt/homebrew/opt/openjdk@21"
-  PATH = "/opt/homebrew/bin:/opt/homebrew/opt/openjdk@21/bin:${env.PATH}"
+    BACKEND_URL = "http://localhost:8000"
+    PROJECT_DIR = "Desktop/Coding/Final_proj copy"
+    JAVA_HOME = "/opt/homebrew/opt/openjdk@21"
+    PATH = "/opt/homebrew/bin:/opt/homebrew/opt/openjdk@21/bin:${env.PATH}"
   }
   stages {
-    stage('Init submodules') {
-        steps {
-          sh 'git submodule update --init --recursive'
-        }
-      }
     stage('Start backend') {
         steps {
             dir("${PROJECT_DIR}/backend") {
