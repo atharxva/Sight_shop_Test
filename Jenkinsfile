@@ -5,14 +5,13 @@ pipeline {
   }
   environment {
     BACKEND_URL = "http://localhost:8000"
-    PROJECT_DIR = "Desktop/Coding/Final_proj copy"
     JAVA_HOME = "/opt/homebrew/opt/openjdk@21"
     PATH = "/opt/homebrew/bin:/opt/homebrew/opt/openjdk@21/bin:${env.PATH}"
   }
   stages {
     stage('Start backend') {
         steps {
-            dir("${PROJECT_DIR}/backend") {
+            dir("backend") {
             sh 'npm install'
             sh 'nohup npm run dev > ../backend-jenkins.log 2>&1 &'
             }
@@ -30,14 +29,14 @@ pipeline {
     }
     stage('Cypress') {
       steps {
-        dir("${PROJECT_DIR}/test") {
+        dir("test") {
           sh 'npx cypress run --config-file cypress.config.js --browser chrome --spec "cypress/e2e/api-tests.cy.js"'
         }
       }
     }
     stage('Selenium') {
       steps {
-        dir("${PROJECT_DIR}/test/selenium") {
+        dir("test/selenium") {
           sh 'npm install --no-save selenium-webdriver'
           sh 'node --experimental-default-type=module api-tests.spec.js'
         }
@@ -45,7 +44,7 @@ pipeline {
     }
     stage('JMeter') {
       steps {
-        dir("${PROJECT_DIR}/test/jmeter") {
+        dir("test/jmeter") {
           sh 'jmeter -n -t api-tests.jmx -l jmeter-results.jtl'
         }
       }
@@ -54,7 +53,7 @@ pipeline {
   post {
     always {
       sh 'pkill -f "nodemon index.js" || true'
-      archiveArtifacts artifacts: "${PROJECT_DIR}/test/jmeter/jmeter-results.jtl", allowEmptyArchive: true
+      archiveArtifacts artifacts: "test/jmeter/jmeter-results.jtl", allowEmptyArchive: true
     }
   }
 }
