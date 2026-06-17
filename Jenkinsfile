@@ -12,7 +12,7 @@ pipeline {
     stage('Start backend') {
         steps {
             dir("backend") {
-            sh 'npm install'
+            sh 'npm install --legacy-peer-deps'
             sh 'nohup npm run dev > ../backend-jenkins.log 2>&1 &'
             }
         sh '''
