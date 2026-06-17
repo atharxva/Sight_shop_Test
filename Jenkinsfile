@@ -38,7 +38,7 @@ pipeline {
       steps {
         dir("test/selenium") {
           sh 'npm install --no-save selenium-webdriver'
-          sh 'node api-tests.spec.mjs'
+          sh 'node api-tests.spec.js'
         }
       }
     }
