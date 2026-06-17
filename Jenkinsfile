@@ -38,7 +38,7 @@ pipeline {
       steps {
         dir("test/selenium") {
           sh 'npm install --no-save selenium-webdriver'
-          sh 'node --experimental-default-type=module api-tests.spec.js'
+          sh 'node api-tests.spec.mjs'
         }
       }
     }
@@ -53,7 +53,7 @@ pipeline {
   post {
     always {
       sh 'pkill -f "nodemon index.js" || true'
-      archiveArtifacts artifacts: "test/jmeter/jmeter-results.jtl", allowEmptyArchive: true
+      archiveArtifacts artifacts: "backend-jenkins.log,test/jmeter/jmeter-results.jtl", allowEmptyArchive: true
     }
   }
 }
