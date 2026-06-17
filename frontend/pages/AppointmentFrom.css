@@ -1,0 +1,110 @@
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .appointment-form-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .appointment-form-container h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+  
+  /* Doctor Info Section */
+  .appointment-doctor-info {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .appointment-doctor-info h2 {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  
+  .appointment-doctor-info p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* Form Styles */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  label {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  input, textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 5px;
+  }
+  
+  input[type="date"],
+  input[type="time"] {
+    max-width: 200px;
+  }
+  
+  textarea {
+    resize: vertical;
+    height: 120px;
+  }
+  
+  /* Submit Button */
+  button {
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  
+  /* Message Styles */
+  p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #007bff;
+    margin-top: 20px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .appointment-form-container {
+      padding: 15px;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+    }
+  }
+  

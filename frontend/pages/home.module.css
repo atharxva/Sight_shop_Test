@@ -1,0 +1,51 @@
+.body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    height: 50vh;
+    margin-left: 20vh;
+}
+
+.imageContainer img{
+    width: 90vh;
+    height: 80vh;
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    justify-content: center; 
+    gap: 10px; 
+    margin-left: 10vh;
+    margin-top: 10vh;
+  }
+  
+  .textContainer h1 {
+    margin: 0;
+    font-size: 2.5rem; 
+  }
+  
+  .explorebtn {
+    padding: 15px 25px; 
+    font-size: 1rem;
+    border: 3px solid #000000;
+    background-color: #3AAFA9;
+    color: #000000;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    margin-top: 20px;
+    transition: 0.5s;
+    border-radius: 0px;
+  }
+  
+  .explorebtn:hover {
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 1); 
+    transition: 0.5s;
+  }
+  

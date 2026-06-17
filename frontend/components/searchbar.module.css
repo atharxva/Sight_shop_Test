@@ -1,0 +1,73 @@
+.searchbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    position: relative; /* Ensures dropdown is positioned relative to the parent container */
+  }
+  
+  .input {
+    display: flex;
+    align-items: center;
+    width: 300px; /* Ensure consistent width for input */
+    height: 40px;
+    border: 3px solid #000;
+    padding: 5px;
+    transition: 0.5s;
+    outline: none;
+    border-radius: 0px;
+  }
+  
+  .input:hover {
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 1);
+    transition: 0.5s;
+  }
+  
+  .input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+  }
+  
+  /* Dropdown container */
+  .dropdown {
+    position: absolute;
+    top: calc(100% + 5px); /* Adjust spacing below the input */
+    left: 0;
+    width: 100%; /* Match dropdown width to input width */
+    background-color: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    max-height: 200px; /* Limit height with scroll */
+    overflow-y: auto;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding/border in width calculations */
+  }
+  
+  /* Individual dropdown items */
+  .dropdownItem {
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .dropdownItem:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Links inside dropdown items */
+  .link {
+    text-decoration: none;
+    color: #333;
+    display: block;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }
+  

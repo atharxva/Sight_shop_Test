@@ -1,0 +1,106 @@
+/* General Styling */
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #ffffff; /* Light background */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .custom-home {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  .custom-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #007bff; /* Blue color for title */
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  /* Cart Items */
+  .custom-cart-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .custom-cart-item {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 200px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .custom-cart-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .custom-cart-item-image {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+  
+  .custom-cart-item-details {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .custom-cart-item-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  
+  /* Empty Cart Message */
+  .custom-empty-cart {
+    font-size: 18px;
+    color: #888;
+    margin-top: 20px;
+  }
+  
+  /* Checkout Section */
+  .custom-checkout-container {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .custom-total {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .custom-checkout-button {
+    background-color: #28a745; /* Green button */
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+  }
+  
+  .custom-checkout-button:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: translateY(-2px);
+  }
+  

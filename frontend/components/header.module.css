@@ -1,0 +1,114 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #3AAFA9;
+    border-bottom: 5px solid #000000;
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
+
+.welcomeMessage {
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+    margin: 0 20px;
+    white-space: nowrap;
+}
+
+.searchbar {
+    flex: 1;
+    max-width: 500px;
+    margin: 0 20px;
+}
+
+.cartContainer {
+    display: flex;
+    align-items: center;
+    gap: 25px; 
+    margin: 0 20px;
+}
+
+.products,
+.doctors,
+.cart,
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.products img,
+.doctors img,
+.cart img {
+    width: 45px;
+    height: 45px;
+    transition: transform 0.2s ease;
+}
+
+.profile img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.2s ease;
+}
+
+.products img:hover,
+.doctors img:hover,
+.cart img:hover,
+.profile img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.profileLink {
+    display: flex;
+    align-items: center;
+    margin-left: 25px; 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        padding: 10px;
+    }
+
+    .welcomeMessage {
+        order: 2;
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .searchbar {
+        order: 3;
+        width: 100%;
+        max-width: none;
+        margin: 10px 0;
+    }
+
+    .cartContainer {
+        order: 4;
+        justify-content: center;
+        width: 100%;
+        margin: 10px 0;
+        gap: 30px; 
+    }
+
+    .profileLink {
+        order: 5;
+        margin: 10px auto;
+    }
+}
